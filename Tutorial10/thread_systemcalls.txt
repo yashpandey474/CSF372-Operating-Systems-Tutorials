@@ -1,0 +1,29 @@
+#CREATE A NEW THREAD
+
+int pthread_Create(pthread_t * thread, const pthread_attr_t * attr, void*(*start)(void*), void* arg);
+
+-> thread -> location where id of new thread should be stored
+-> attr NULL if default
+-> start is main function of thread
+
+#GET THREAD ID
+
+pthread_t pthread_self();
+
+#WAIT FOR A THREAD TO FINISH
+
+int pthread_joni(pthread_t threadID, void** statusStore);
+-> If the thread has already terminated, return immediately.
+
+
+#DETACH A THREAD [NOT CALLING THREAD]
+int pthread_detach(pthread_t threadID);
+-> automatically releases its allocated resources.
+-> no other thread can join it after being detached.
+
+#THREAD TERMINATION
+void pthread_exit(void* status)
+
+->ENDS CALLING THREAD
+-> NEVER RETURN FROM pthread_exit
+-> MAKES STATUS AVAILABLE TO OTHERS
