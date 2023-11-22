@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <dirent.h>
+#include <string.h>
 
 int main(void){
     struct dirent *de; //POINTER FOR DIRECTORY ENTRY
@@ -12,6 +13,10 @@ int main(void){
     }
 
     while ((de = readdir(dr)) != NULL){
+        //SKIP CURRENT DIRECTORY & PARENT DIRECTORY ENTRIES
+        if (strcmp(de->d_name, ".") == 0 || strcmp(de->d_name, "..") == 0){
+            continue;
+        }
         printf("%s\n", de->d_name);
     }
 

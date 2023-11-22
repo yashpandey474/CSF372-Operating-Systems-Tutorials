@@ -1,0 +1,13 @@
+        SYSTEM CALLS FOR SHARED MEMORY
+
+int shmget((key_t key, size_t size, int shmflg));
+
+key_t ftok(char* pathname, int proj);
+
+void *shmat(int shmid, const void *shmaddr, int shmflg);
+
+int shmdt(const void * shmaddr);
+
+int shmctl(int shmid, int cmd, struct shmid_ds *buf);
+
+GENERATING A UNIQUE KEY: id = shmget(IPC_PRIVATE, SHMSIZE, IPC_CREAT | 0666);

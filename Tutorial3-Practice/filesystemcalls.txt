@@ -1,0 +1,21 @@
+
+#TO CREATE A NEW FILE
+fd = creat(pathname, mode)
+
+#TO OPEN A FILE
+fd = open(pathname, flags, mode);
+
+#TO CLOSE A FILE DESCRIPTOR
+close(fd)
+
+#TO READ FROM A FILE USING FILE DESCRIPTOR
+read(fd, buffer, sizeof(buffer));
+
+#TO WRITE TO A FILE FROM A BUFFER
+write(fd, buffer, sizeof(buffer));
+
+#TO LINK TWO PATHS
+link(oldpath, newpath);
+
+#TO DUPLICATE A FILE DESCRIPTOR TO ANOTHER
+dup2(oldfd, newfd);

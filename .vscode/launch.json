@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/kpandey/Desktop/3-1/Operating Systems/TUTORIAL_CODE",
-      "program": "/Users/kpandey/Desktop/3-1/Operating Systems/TUTORIAL_CODE/build/Debug/outDebug"
+      "cwd": ".",
+      "program": "build/Debug/outDebug"
     }
   ]
 }

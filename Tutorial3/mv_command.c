@@ -35,7 +35,7 @@ int main(int argc, char * argv[]){
         printf("LINK ERROR");
         return 1;
     }
-    printf("UNLINKED SU CCESSFULLY");
+    printf("UNLINKED SUCCESSFULLY");
     
 }
 

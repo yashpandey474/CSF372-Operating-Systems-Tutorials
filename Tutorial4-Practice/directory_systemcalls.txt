@@ -1,0 +1,21 @@
+#GET THE CURRENT WORKING DIRECTORY
+char* getcwd(buffer, size);
+
+
+#CHANGE CWD
+int chdir(pathname)
+
+#MAKE A NEW EMPTY DIRECTORY
+int mkdir(pathname, mode)
+
+#REMOVE AN EMPTY DIRECTORY [NOT REMOVED IF NOT EMPTY]
+int rmdir(pathname)
+
+#OPEN A DIRECTORY STREAM
+DIR* opendir(pathname);
+
+#READ FROM A DIRECTORY
+(#include <dirent.h>)
+struct dirent* entry readdir(DIR* ds);
+
+#GET MA

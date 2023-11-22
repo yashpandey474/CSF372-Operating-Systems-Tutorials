@@ -25,13 +25,15 @@ int main(int argc, char* argv[]){
     while ((nbread = read(srcFD, buff, BUFF_SIZE)) > 0){
         if (write(destFD, buff, nbread) != nbread){
             printf("\nERROR I WRITING DATA TO %s\n", argv[2]);
-            return 1;
+            exit(1);
         }
 
         if (nbread == -1){
             printf("\nERROR IN READING DATA FROM %s\n", argv[1]);
+            exit(1);
         }
     }
     close(srcFD);
     close(destFD);
+    exit(0);
 }
